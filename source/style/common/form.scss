@@ -1,0 +1,200 @@
+.overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  z-index:2;
+}
+.form-container{
+  display: none;
+  // position: relative;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  width: 30rem;
+  // align-self: center;
+  z-index: 3;
+  color:#fff;
+  @include mobileLand{
+    top: 30%;
+    left: 30%;
+    width: 40rem;
+  }
+  @include mobilePort{
+    top: 30%;
+    left: 14%;
+    width: 50rem;
+  }
+}
+.form-container.content-page{
+  display: block;
+}
+.close-button{
+  position: absolute;
+  font-size: 1.2rem;
+  right: 1.4rem;
+  top: -3rem;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  @include mobilePort{
+      // font-size: 3rem;
+    }
+  .log1,.log2{
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color:#fff;
+    cursor: pointer;
+  }
+  .log1{
+    position: absolute;
+    right: -1.2rem;
+    top: 0.6rem;
+    transform: rotate(45deg);
+  }
+  .log2{
+    position: absolute;
+    right: -1.2rem;
+    top: 0.6rem;
+    transform: rotate(-45deg);
+  }
+}
+#feedback-form {
+  max-width: 30rem;
+  border-radius: 3px;
+   @include mobilePort{
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      text-align: center;
+    } 
+  
+  & input, & textarea{
+    border-radius: 3px; 
+    border: none;
+    width: 90%;
+    margin: 0.5rem 1rem 1.5rem 1rem;
+    margin-top:0.5rem;
+    padding: 0.7rem;
+    @include mobilePort{
+      width: 80%;
+      margin: 0.5rem 1rem 3rem 1rem;
+      
+    } 
+  }
+  & label{
+    font-size: 1.2rem;     
+    text-indent: 10px;
+    padding: 0 1rem;
+
+  }
+  .form-text{
+    @include mobilePort{
+      display: block;
+      text-indent: 3rem;
+      font-size: 2rem;
+      text-align: left;
+      margin-top: 1rem;
+    }
+  .form-text.name{
+    @include mobilePort{
+      margin-top: 3rem; 
+    }
+  }
+  }
+
+  .contacts{
+    padding: 0.3rem 0.7rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+    @include mobilePort{
+      width: 80%;
+      margin: 0.5rem 1rem 3rem 1rem;
+      
+    } 
+  }
+  @include mobilePort{
+    top: 30%;
+    // font-size: 4rem;
+    max-width: 50rem;
+  }
+}
+#feedback-form{
+  .message{
+    margin-top: 3rem;
+  }
+  .message.contacts-message{
+    margin-top: 0; 
+  } 
+}
+
+#feedback-form [type="submit"] {
+  width: 25%;
+  padding: 2%;
+  border: none;
+  border-radius: 3px;
+  background: #36a9e0;
+  color: #fff;
+  font-size:1.4rem;
+  @include mobilePort{
+      width: 83%;
+      font-size: 2rem;
+    }
+}
+#feedback-form [type="submit"]:hover {
+  background: #5c90c2;
+  cursor: pointer;
+}
+
+
+.modal-responce{ 
+  position: absolute;
+  top: 24%;
+  left: 24%;
+  // display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70rem;
+  height: 45rem;
+  align-self: center;
+  font-size: 2.8rem;
+  padding-top: 3rem;
+  text-align: center;
+  line-height: 4rem;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #36a9e0;
+  z-index: 4;
+  @include mobilePort{
+      width: 59rem;
+      left: 5%;
+    }
+  .dispatch-girl{
+    width: 20rem;
+    height: 27rem;
+  }
+  & button{
+    cursor: pointer;
+    padding: 0.3rem 7rem;
+    margin: 1rem 0 2rem 0;
+    background-color: #36a9e0;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 1.6rem;
+  }
+  &:hover button{
+    color:rgba(255,255,255,0.7);
+    border-color: rgba(255,255,255,0.7);
+  }
+}
+
+
+
+
+
+
+
+
+
+
