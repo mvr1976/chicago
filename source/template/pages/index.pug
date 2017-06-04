@@ -4,4 +4,30 @@ block variables
   - var title = 'Home page'
 
 block content
-  include ../common/_greating
+  include ../common/_header
+  include ../common/_headerMobile
+  div.index-content(id="index-content")
+   div.owl-carousel
+    div.slide.slide1
+     //- img(src="/assets/img/2opt.jpg")
+    div.slide.slide2
+     //- img(src="/assets/img/3opt.jpg")
+    div.slide.slide3
+     //- img(src="/assets/img/4opt.jpg")
+   div.text-container
+    div.arrow.arrow-left
+    div.text-block
+      h1.slogan We shoot everything that moves...
+      ul.feat-list
+       li.feat-item high quality product
+       li.feat-item fast and professional performance
+       li.feat-item individual approach
+      p.core-info We can show to others that Your Buisness, Good or Property - The Best. Your projects are someone's dream and we want to show this dream.
+      p.core-info We can to connect them. Interiors and exteriors of real estate.
+      p.core-info Commercial videos of your buisness. Everything You Need - We Can.
+    div.arrow.arrow-right
+  include ../common/_footer
+  
+  include feedback-form
+    
+  

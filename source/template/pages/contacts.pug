@@ -1,0 +1,36 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  include ../common/_header
+  include ../common/_headerMobile
+  div.contacts-content.contacts-special
+   div.contacts-container
+    div.about-us
+     p.heading About us
+     p Your Business, Goods or Property are The Best and we're here to show it this particular way. Your Project is someone's dream and we can reveal it. Your Business, Goods or Property are The Best and we're here to show it this particular way. Your Project is someone's dream and we can reveal it.
+    div.contact
+     p.heading Contact
+     p Your Business, Goods or Property are The Best and we're here to show it this particular way. Your Project is someone's dream and we can reveal it.
+    div.form-container.form-container--contacts
+     form(method="POST" id="feedback-form") 
+      label.form-text.name Name
+      input.contacts(type="text" name="nameFF" x-autocompletetype="name")
+      label.form-text Email
+      input.contacts(type="email" name="contactFF" x-autocompletetype="email")
+      label.form-text Phone
+      input.contacts(type="phone" name="phoneFF")
+      div.message.contacts-message
+       label.form-text Message
+       textarea(name="messageFF" required rows="2") 
+      input.submit(type="submit" value="Submit")
+   div.overlay
+   div.modal-responce Thank you!
+    br
+    | We will call you back in the near future.
+    img.dispatch-girl(src="/assets/img/dispatch-girl.png" alt="#")
+    button.responce-fuckoff ok
+  include ../common/_footer
+  include feedback-form

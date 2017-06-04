@@ -1,0 +1,32 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  include ../common/_header
+  include ../common/_headerMobile
+  div.works-content.important
+   div.works-container
+    div.tube-frame
+     div.videowrapper
+      iframe(width="500" height="300" src="https://www.youtube.com/embed/OPwqHxac70M" frameborder="0" allowfullscreen)
+    div.slider-container
+     div.owl-carousel.owl-works
+      div.slide-works.slide-works1
+      div.slide-works.slide-works2
+      div.slide-works.slide-works3
+     div.arrowWork-left
+      img(src="/assets/img/arrowWork-left.png")
+     div.arrowWork-right
+      img(src="/assets/img/arrowWork-right.png")
+    div.mob-photoGallery
+      div.mob-photo
+       img(src="/assets/img/1c.jpg")
+      div.mob-photo 
+       img(src="/assets/img/2c.jpg")
+      div.mob-photo 
+       img(src="/assets/img/3c.jpg") 
+  div.footer-wrapper
+   include ../common/_footer
+  include feedback-form

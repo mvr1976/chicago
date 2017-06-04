@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+  - var title = 'slider'
+
+block content
+  include ../common/_header
+  div.slider-container
+   div.arrow-left left!
+   div.arrow-right right!
+   ul.slider
+    li.slide.slide1 1
+    li.slide.slide2 2
+    li.slide.slide3 3
+  
+  include ../common/_footer
+  

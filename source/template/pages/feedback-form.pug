@@ -1,0 +1,27 @@
+extends ../_template
+
+block variables
+  - var title = 'feedback form'
+
+block content
+ div.form-container
+   div.close-button Close
+    div.log1
+    div.log2
+   form(method="POST" id="feedback-form") 
+    label.form-text Name
+    input(type="text" name="nameFF" x-autocompletetype="name")
+    label.form-text Email
+    input(type="email" name="contactFF" x-autocompletetype="email")
+    label.form-text Phone
+    input(type="phone" name="phoneFF")
+    div.message
+     label.form-text Message
+     textarea(name="messageFF" required rows="5") 
+    input.submit(type="submit" value="Submit")
+ div.overlay
+ div.modal-responce Thank you!
+  br
+  | Please wait and we call you back
+  img.dispatch-girl(src="/assets/img/dispatch-girl.png" alt="#")
+  button.responce-fuckoff ok
